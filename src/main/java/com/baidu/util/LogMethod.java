@@ -22,5 +22,9 @@ public class LogMethod implements MethodBeforeAdvice,AfterReturningAdvice{
 		logger.log(Level.INFO, "方法执行结束");
 		
 	}
+	
+	public void rghit(String name){
+		logger.log(Level.INFO, "方法开始执行"+name);
+	}
 
 }

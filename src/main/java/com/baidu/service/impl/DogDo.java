@@ -29,9 +29,10 @@ public class DogDo implements CommonDo{
 	public void setTest(Msg test) {
 		this.test = test;
 	}
-	public void dog(){
-		System.out.println("狗狗接受"+msg+"信息");
-		System.out.println(test.getTest());
+	
+	public void dog(String name){
+		System.out.println("狗狗接受"+msg+"信息"+name);
+
 	}
 	
 	public void init(){

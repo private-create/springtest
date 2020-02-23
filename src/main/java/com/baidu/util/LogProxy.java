@@ -28,5 +28,9 @@ public class LogProxy implements InvocationHandler{
 		}
 		return result;
 	}
+	
+	public void testLog(String name){
+		logger.log(Level.INFO, "注释日志");
+	}
 
 }

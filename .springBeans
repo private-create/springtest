@@ -10,6 +10,7 @@
 		<config>src/main/resources/SpringBeans.xml</config>
 		<config>src/main/resources/config.xml</config>
 		<config>src/main/resources/AutoConfig.xml</config>
+		<config>src/main/resources/springAop.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

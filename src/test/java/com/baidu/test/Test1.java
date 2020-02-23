@@ -19,7 +19,7 @@ public class Test1 {
 		dog.speak();
 		DogDo dog1=(DogDo)dog;
 		BridDo brid1=(BridDo)brid;
-		dog1.dog();
+		
 		brid.speak();
 		brid1.brid();
 	}
