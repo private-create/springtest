@@ -11,6 +11,9 @@
 		<config>src/main/resources/config.xml</config>
 		<config>src/main/resources/AutoConfig.xml</config>
 		<config>src/main/resources/springAop.xml</config>
+		<config>src/main/resources/SpringApplicationContext.xml</config>
+		<config>src/main/resources/mapper/UserMapper.xml</config>
+		<config>src/main/resources/spring_quartz.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

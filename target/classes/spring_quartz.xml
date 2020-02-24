@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 配置要执行的定时方法的bean job -->
+	<bean id="springQUartz" class="com.baidu.main.QuartzBegin"></bean>
+	
+	<!--配置任务调度方案策略 jobDetail-->
+	<bean id="springQUartzJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		
+		<!-- 配置自定义要执行的方法所在的类 -->
+		<property name="targetObject" ref="springQUartz"></property>
+		
+		<!-- 配置自定义类要定时执行的方法 -->
+		<property name="targetMethod" value="hello"></property>
+	</bean>
+	
+	<!-- 配置调度参数 -->
+	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		
+		<!-- 配置调度策略 -->
+		<property name="jobDetail" ref="springQUartzJob"></property>
+		
+		<!-- 配置调度时间 -->
+		<property name="cronExpression" value="0/5 * * * * ?"></property>
+		
+	</bean>
+	
+	<!-- 调度容器的注册 -->
+	<bean id="SpringJobScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		
+		<property name="triggers" ref="cronTrigger"></property>
+	 </bean>
+
+</beans>
